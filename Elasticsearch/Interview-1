@@ -1,0 +1,40 @@
+1.	What is the use of attributes- enabled, index and store?
+	The enabled attribute is applicable to several ElasticSearch created fields like _index and _size. 
+	Store implies the data stored by Lucene, which will again return when necessary. Stored fields are not searchable.
+	The index is employed for searching. Indexed fields are transformed during analysis, and cannot retrieve the original data when necessary.
+
+2.	What is an Analyzer in ElasticSearch?
+	While indexing data, it is transformed internally via the defined Analyzer for the index.
+	Analyzers are made of one Tokenizer, preceded by CharFilters and zero or many TokenFilters. On the other hand, analysis module refers Analyzers under the name of mapping definitions or any APIs.
+	Elasticsearch is prebuilt with analyzers that are ready to use. However, you can integrate the built in character, token filters, along with tokenizers to create custom analyzers.
+
+3.	What is Character Filter in Elasticsearch Analyzer?
+	A character filter obtains the ideal text as stream of characters, later on modifies it by adding, deleting, or altering characters. For example, any character filter in usage has the ability to convert Hindu-Arabic numerals (٠‎١٢٣٤٥٦٧٨‎٩‎) into Arabic-Latin numerals (0123456789), and even sometimes strip HTML elements via the stream.
+
+4.	What is Token filters in Elasticsearch Analyzer?
+	A token filter obtains the token stream, later on add, delete, or alter the tokens. For instance, a lowercase token filter modifies all tokens into lowercase, a stop token filter deletes stop words, and a synonym token filter includes synonyms into the token stream.
+	Token filters will be unable to change the position or character offsets of any certain token.
+
+5.	What is a Tokenizer?
+	Tokenizers break down a string into stream of tokens. A single tokenizer split the string into terms when working with punctuation and whitespace. Elasticsearch has a number of built in tokenizers which can be used to build custom analyzers.
+	
+6.	What is Elasticsearch REST API and use of it?
+	Elasticsearch provides a very comprehensive and powerful REST API that you can use to interact with your cluster. Among the few things that can be done with the API are as follows:
+	Check your cluster, node, and index health, status, and statistics
+	Administer your cluster, node, and index data and metadata
+	Perform CRUD (Create, Read, Update, and Delete) and search operations against your indexes
+	Execute advanced search operations viz. aggregations, filtering, paging, scripting, sorting, among many others.
+	
+7.	Does ElasticSearch have a schema?
+	Yes, Elasticsearch can have a schema. A schema is a description of one or more fields that describes the document type and how to handle the different fields of a document. The schema in Elasticsearch is a mapping that emphasizes the JSON document fields and other data type, as well as Lucene indexes under the hood. Because of this, in Elasticsearch terms, we usually call this schema a “mapping”.
+	
+8.	What is an index in ElasticSearch?
+	Index is a ‘database’ within relational database. Its mapping defines multiple types and maps to one or many primary shards and can have zero or many replica shards.
+		MySQL => Databases
+		ElasticSearch => Indices
+		
+9.	What is a shard?
+	Different applications need to employ multiple ElasticSearch instances on separate machines. Data in every index is divided into multiple partitions, each controlled by a separate ElasticSearch instance. Each such partition is termed as shard. By default, each ElasticSearch index possess 5 shards.
+	
+10.	What is the query language of Elasticsearch?
+	Apache Lucene query language which is also called as Query DSL is used by Elasticsearch.
