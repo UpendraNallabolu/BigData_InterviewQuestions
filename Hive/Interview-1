@@ -1,0 +1,29 @@
+1.	What is a Hive Variable and What Is It Used For?
+	Referenced by Hive scripting languages, a Hive variable is created in the Hive environment and uses the source command. Once Hive queries begin executing, a Hive variable provides values to queries. 
+
+2. 	What Are the Different Modes in the Hive?
+	This may seem like an easy question, but again, sometimes interviewers like to ask these basic questions to see how confident you are when it comes to your Hive knowledge. Answer by saying that Hive can sometimes operate in two modes, which are MapReduce mode and local mode. Explain that this depends on the size of the DataNodes in Hadoop. 
+
+3.	What is Hive Bucketing?
+	When performing queries on large datasets in Hive, bucketing can offer better structure to Hive tables. You’ll also want to take your answer a step further by explaining some of the specific bucketing features, as well as some of the advantages of bucketing in Hive. For example, bucketing can give programmers more flexibility when it comes to record-keeping and can make it easier to debug large datasets when needed.
+
+4.	What is Hive Composed Of?
+	Hive is made up of three main components: Hive Services, Hive Clients, and Hive Storage and Computing. You should also briefly explain to your interviewer what each component is capable of and the differences between each part.
+	
+5.	What Are the Main Components of Hive Architecture?
+	You’ll first want to answer this question by naming each of the main components: Driver, User Interface, Execute Engine, Compiler, and Megastore. You’ll really demonstrate your Hive knowledge to your interviewer if you’re able to explain the capabilities of each component as well. 
+
+6.	What Options Are Available When It Comes to Attaching Applications to the Hive Server?
+	Explain the three different ways (Thrift Client, JDBC Driver, and ODBC Driver) you can connect applications to the Hive Server. You’ll also want to explain the purpose for each option: for example, using JDBC will support the JDBC protocol.
+
+7.	What Variations of Tables Are Available in Hive?
+	This is a fairly straightforward question for someone experienced in Hive, so it’s important to know the answer without hesitation: The two types of tables are managed tables and external tables.
+
+8.	What Are Partitions?
+	In Hive, tables are organized and divided into partitions. You’ll want to include this in your answer, as well as explain why partitions are useful in Hive. 
+
+9.	What File Formats and Applications Does Hive Support?
+	The answer to this question will include a lot of information, so it’s important to be prepared to list as many supported file formats and applications as possible. Applications written in C++, Python, Java, PHP, and Ruby are generally supported in Hive. When it comes to filing formats, Hive supports text file formats by default but also supports binary file formats, such as Avro data, ORC, Sequence, and Parquet files.
+	
+10.	Why Hive doesnot store Metadata information in HDFS?
+	Hive stores metadata information in the metastore using RDBMS instead of HDFS. The main reason for choosing RDBMS is to achieve low latency because HDFS read/write operations are time consuming processes.
