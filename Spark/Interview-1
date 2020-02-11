@@ -1,0 +1,46 @@
+1.	What is YARN?
+	Like Hadoop, YARN is one of the key highlights in Spark, giving a focal and asset administration stage to convey versatile activities over the group. YARN is an appropriated compartment supervisor, as Mesos for instance, though Spark is an information preparing instrument. Spark can keep running on YARN, a similar way Hadoop Map Reduce can keep running on YARN. Running Spark on YARN requires a parallel dissemination of Spark as based on YARN support.
+
+2.	Does Spark SQL help in big data analytics through external tools too?
+	Yes, Spark SQL helps in big data analytics through external tools too. Let us see how it is done actually –
+	It access data using SQL statements in both ways either data is stored inside the Spark program or data needs to access through external tools that are connected to Spark SQL through database connectors like JDBC or ODBC.
+	It provides rich integration between a database and regular coding with RDDs and SQL tables. It is also able to expose custom SQL functions as needed.
+
+3.	How is Spark SQL superior from others – HQL and SQL?
+	Spark SQL is advance database component able to support multiple database tools without changing their syntax. This is the way how Spark SQL accommodates both HQL and SQL superiorly.
+
+4.	Do real-time data processing is possible with Spark SQL?
+	Real-time data processing is not possible directly but obviously, we can make it happen by registering existing RDD as a SQL table and trigger the SQL queries on priority.
+
+5.	Explain the concept of Resilient Distributed Dataset (RDD).
+	RDD is an abbreviation for Resilient Distribution Datasets. An RDD is a blame tolerant accumulation of operational components that keep running in parallel. The divided information in RDD is permanent and distributed in nature. There are fundamentally two sorts of RDD:
+	Parallelized Collections: Here, the current RDDs run parallel with each other.
+	Hadoop Datasets:
+		They perform works on each document record in HDFS or other stockpiling frameworks.
+		RDDs are essential parts of information that are put away in the memory circulated crosswise over numerous hubs. 
+		RDDs are sluggishly assessed in Spark. 
+		This apathetic assessment is the thing that adds to Spark's speed.
+		
+6.	How to map data and forms together in Scala?
+	The most wonderful solution to map data and forms together in Scala is “apply” and “unapply" methods. As the name suggests, the apply method is used to map data while the unapply method can be used to unmap the data. The unapply method follows the reverse operation of the apply method.
+	
+7.	How can Auxiliary Constructors be defined in Scala?
+	The keywords "def" and "this" is used to declare secondary or auxiliary constructors in Scala programming language. They are designed to overload constructors similar to Java. This is necessary to understand the working of each constructor deeply so that the right constructor can be invoked at the right time. Even declaration of constructor differs from each other in terms of data types or parameters.
+	
+8.	How will you explain yield keyword in Scala?
+	Yield keyword can be used either before or after expressions. It is taken more useful when declared before expression. The return value from every expression will be stored as the collection. The returned value can either be used as a normal collection or iterate in another loop.
+	
+9.	How can functions be invoked silently without passing all the parameters?
+	In case, when we want to invoke functions silently without passing all the parameters, we should use implicit parameters. The parameters that you want to use implicit, you need to provide default values for the same.
+
+10.	What do you mean by Scala Traits and how it can be used in Scala programming language?
+	Scala trait is an advanced class in Scala that enables the use of multiple inheritances and it can be extended to multiple classes together. In other words, one class can have multiple Scala traits based on requirement. Traits are used commonly when you need dependency injection. You just need to initiate class with Scala traits and dependency will be injected immediately.
+	
+11.	How are Monads useful for Scala developers?
+	If you want to understand Monads in simple words then it would not be wrong comparing them with a wrapper. As wrappers are used to protect any product and to make it attractive, Monads are used for the same purpose in Scala. They are used to wrap objects together and perform two important functions further. These functions are –
+		Identity through “unit” in Scala
+		Bind through “flatMap” in Scala 
+
+12.	How can you create RDD in Apache Spark?
+	There are two popular techniques that can be used to create RDD in Apache Spark – First is Parallelize and other is text File method. Here is a quick explanation of how both methods can be used for RDD creation. val x= Array(5,7,8,9) val y= sc.parallelize(x) val input = sc.textFile(“input.txt”);
+
