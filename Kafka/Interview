@@ -1,0 +1,25 @@
+1.	How will you define Kafka?
+	  Kafka is an open-source message broker project that is written in Scala programming language and it is an initiative by Apache Software Foundation. 
+	  A unique set of features make it most suitable choice for the data integration and one of the leading data processing tools of choice.
+	
+2.	What are the major components of Kafka integration product?
+	  Topic–The messages stream that belongs to the same pattern.
+	  Producer–It helps in publishing messages to the topic.
+	  Broker –This is a set of various servers where all published data is stored.
+	  Consumer–It subscribes to the different topics and fetch data from the brokers.
+	
+3.	Explain the offset in Kafka data integration tool?
+	  Messages are stored in partitions and assigneda unique ID to each of them for quick and easy access. That unique number is named as the offset that is responsible to identify each of the messages in the partition.
+	
+4.	What is the meaning of Leader and Follower in Kafka?
+	  Every partition in Kafka has one main server that is named as “Leader” and one or more non-connected servers that are named as the “Followers”.
+	
+5.	How to balance loads in Kafka when one server fails?
+	  Every partition in Kafka has one main server that plays the role of a leader and one or more non-connected servers that are named as the followers. Here, the leading server sets the permission and rest of the servers just follow him accordingly. In case, leading server fails then followers take the responsibility of the main server.
+	
+6.	Is it possible to get the offset value of the message once it is produced already?
+	  No, we cannot do that.
+ 
+7.  Where was the Offset value stored in v0.5 and v0.9?
+    In v0.5 it is stored in Zookeeper.
+    In v0.9 it is stored in Kafka Consumer Offset API.
