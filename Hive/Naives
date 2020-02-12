@@ -1,0 +1,30 @@
+from textblob import TextBlob
+from textblob.classifiers import NaiveBayesClassifier
+import csv
+train = []
+with open('cpu.txt', 'r') as csvfile:
+    reader = csv.reader(csvfile, delimiter=',', quotechar='"')
+    for row in reader:
+        tup = unicode(row[0], "ISO-8859-1"), row[1]
+        train.append(tup)
+// this can be done in a loop, but for the time being let it be
+with open('memory.txt', 'r') as csvfile:
+    reader = csv.reader(csvfile, delimiter=',', quotechar='"')
+    for row in reader:
+        tup = unicode(row[0], "ISO-8859-1"), row[1]
+        train.append(tup)
+
+with open('disk.txt', 'r') as csvfile:
+    reader = csv.reader(csvfile, delimiter=',', quotechar='"')
+    for row in reader:
+        tup = unicode(row[0], "ISO-8859-1"), row[1]
+        train.append(tup)
+
+with open('mysql.txt', 'r') as csvfile:
+    reader = csv.reader(csvfile, delimiter=',', quotechar='"')
+    for row in reader:
+        tup = unicode(row[0], "ISO-8859-1"), row[1]
+        train.append(tup)
+
+cl = NaiveBayesClassifier(train)
+cl.classify(email)
