@@ -44,3 +44,19 @@
 12.	How can you create RDD in Apache Spark?
 	There are two popular techniques that can be used to create RDD in Apache Spark – First is Parallelize and other is text File method. Here is a quick explanation of how both methods can be used for RDD creation. val x= Array(5,7,8,9) val y= sc.parallelize(x) val input = sc.textFile(“input.txt”);
 
+13.	What is the job of store() and continue()?
+	At whatever point you need to store a RDD into memory with the end goal that the RDD will be utilized on different occasions or that RDD may have made after loads of complex preparing in those circumstances, you can exploit Cache or Persist. You can make a RDD to be continued utilizing the persevere() or store() works on it. The first occasion when it is processed in an activity, it will be kept in memory on the hubs.
+	When you call persevere(), you can indicate that you need to store the RDD on the plate or in the memory or both. On the off chance that it is in-memory, regardless of whether it ought to be put away in serialized organization or de-serialized position, you can characterize every one of those things. 
+	reserve() resembles endure() work just, where the capacity level is set to memory as it were.
+	
+14.	What are Broadcast Variables?
+	Communicate Variables are the perused just shared factors. Assume, there is a lot of information which may must be utilized on various occasions in the laborers at various stages.
+	
+15.	What is Sliding Window?
+	In Spark Streaming, you need to determine the clump interim. In any case, with Sliding Window, you can indicate what number of last clumps must be handled. In the beneath screen shot, you can see that you can indicate the clump interim and what number of bunches you need to process.
+
+16.	What is the distinction among continue() and store()
+	endure () enables the client to determine the capacity level while reserve () utilizes the default stockpiling level.
+
+
+
