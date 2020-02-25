@@ -27,3 +27,29 @@
 	
 10.	Why Hive doesnot store Metadata information in HDFS?
 	Hive stores metadata information in the metastore using RDBMS instead of HDFS. The main reason for choosing RDBMS is to achieve low latency because HDFS read/write operations are time consuming processes.
+
+11.	What is SAMPLING in HIVE?
+	Sampling allows users to take a subset of dataset and analyze it, without having to analyze the entire data set. If a representative sample is used, then a query can return meaningful results as well as finish quicker and consume fewer compute resources.
+	Hive offers a built-in TABLESAMPLE clause that allows you to sample your tables. TABLESAMPLE can sample at various granularity levels – it can return only subsets of buckets (bucket sampling), or HDFS blocks (block sampling), or only first N records from each input split. Alternatively, you can implement your own UDF that filters out records according to your sampling algorithm.
+	
+12.	What is Vectorization in HIVE?
+	Vectorization allows Hive to process a batch of rows together instead of processing one row at a time. Each batch consists of a column vector which is usually an array of primitive types. Operations are performed on the entire column vector, which improves the instruction pipelines and cache usage. To enable vectorization, set this configuration parameter SET hive.vectorized.execution.enabled=true.
+	
+13.	What are different "Input Format Selection Files" in HIVE?
+	Input formats play a critical role in Hive performance. 
+	For example JSON, the text type of input formats, is not a good choice for a large production system where data volume is really high.
+	These type of readable formats actually take a lot of space and have some overhead of parsing ( e.g JSON parsing ). 
+	To address these problems, Hive comes with columnar input formats like RCFile, ORC etc. 
+	Columnar formats allow you to reduce the read operations in analytics queries by allowing each column to be accessed individually. 
+	There are some other binary formats like Avro, sequence files, Thrift and ProtoBuf, which can be helpful in various use cases too.
+	
+14.	What are the uses of " Map join" in HIVE?
+	Map joins are really efficient if a table on the other side of a join is small enough to fit in the memory.
+	Hive supports a parameter, "hive.auto.convert.join", which when it’s set to “true” suggests that Hive try to map join automatically.
+	When using this parameter, be sure the auto convert is enabled in the Hive environment.
+	
+15.	How to "De-normalizing data" in HIVE?
+	Normalization is a standard process used to model your data tables with certain rules to deal with redundancy of data and anomalies. 
+	In simpler words, if you normalize your data sets, you end up creating multiple relational tables which can be joined at the run time to produce the results. 
+	Joins are expensive and difficult operations to perform and are one of the common reasons for performance issues (Tweet this). 
+	Because of that, it’s a good idea to avoid highly normalized table structures because they require join queries to derive the desired metrics.
